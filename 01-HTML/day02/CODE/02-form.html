@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" name="form1"> 
+    用户名：
+    <input type="text" name="name" placeholder="请输入用户名" accesskey="s">
+        <br>
+    密码:
+    <input type="password" size="50" name="pwd" autofocus required>
+    <br>
+    啥性别:
+    男<input type="radio" name="genger" value="male"> 女<input type="radio" name="genger" value="female">
+    <br>
+    抽烟<input type="checkbox" name="smoke"> 
+    喝酒<input type="checkbox" name="drink">
+    <br>
+    <input type="button" name="button1" value="普通">
+    <br>
+    <input type="submit" name="button2" value="提交">
+    <br>
+    <input type="image" name="button" src="../../day01/resource/1.png">
+    <br>
+    <input type="file" name="file1" value="请选择文件" multiple>
+    <br>
+     <label for="male">Male</label><input type="radio" name="sex" id="male" value="male"><br>
+    <textarea value="签名"  name="text1" id="" cols="30" rows="10"></textarea> <br>
+    来自哪儿:
+    <select name="area" >
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+        <optgroup value="hlj" label="黑龙江">
+            <option value="hen">哈尔滨</option>
+        </optgroup>
+        <option value="mr" selected>--请选择--</option>
+
+    </select><br>
+    <input type="datetime"><br>
+
+    邮箱：
+    <input type="email"><br>
+    <audio src="../resource/Beyond - 光辉岁月.mp3" controls autoplay></audio>   <br>
+    <video src="../resource/通用片头 加音乐.mp4" controls width="500" autoplay></video>
+
+
+    </form>
+</body>
+</html>

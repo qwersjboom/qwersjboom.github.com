@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+
+</head> 
+<!-- 不加form也可以加form有什么用？ -->
+<body>
+    <h4 align="center">青春不常在，抓紧谈恋爱</h4>
+    <form action="#">
+        <table align="center" border="0" width="600" border="3" height="300">
+            <tr align="left">
+                <td>性别</td>
+                <td align="left">
+                    <form action="#" method="get" >    
+                        <input type="radio" name="humen" value="male"><input type="image" name="man" src="../job/images/man.jpg">男
+                        <input type="radio" name="humen" value="female"><input type="image" name="women" src="../job/images/women.jpg">女<br>
+                    </form>
+                </td>
+            </tr> 
+            
+            
+            <tr align="left">
+                <td>生日</td> 
+                <td align="left">              
+                    <input type="date" name="date">
+                </td> 
+            </tr>
+            <tr>
+                <td>所在地区</td>
+                <td align="left">
+                    <form action="#">
+                        <select name="area" >
+                            <option value="bj">北京</option>
+                            <option value="sh">上海</option>
+                            <option value="gz">广州</option>
+                            <option value="sz">深圳</option>
+                            <option value="mr" selected>--请选择--</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>婚姻状况</td>
+                <td align="left">
+                    <form action="#">
+                        <input type="radio" name="married" value="yes">已婚
+                        <input type="radio" name="married" value="no">未婚
+                        <input type="radio" name="married" value="died">丧偶
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>学历</td>
+                <td align="left">
+                    <form action="#">
+                        <select name="edu">
+                            <option value="primary">小学</option>
+                            <option value="junior">初中</option>
+                            <option value="high">高中</option>
+                            <option value="university">大学</option>
+                            <option value="graduate">硕士及以上</option>
+                            <option value="mr" selected>--请选择--</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>月薪</td>
+                <td align="left">
+                    <form action="#">
+                        <input type="text" name="pay">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>手机号</td>
+                <td align="left">
+                    <form action="#">
+                        <input type="text" name="phone">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>昵称</td>
+                <td align="left">
+                    <form action="#">
+                        <input type="text" name="petname">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的类型</td>
+                <td align="left">
+                    <input type="checkbox" name="wumei">妩媚
+                    <input type="checkbox" name="roumei">柔美
+                    <input type="checkbox" name="cute">可爱
+                    <input type="checkbox" name="xxr">小鲜肉
+                    <input type="checkbox" name="realman">型男
+                    <input type="checkbox" name="attitude">气质
+                </td>
+            </tr>
+            <tr>
+                <td>自我介绍</td>
+                <td>
+                    <textarea name="introduce" cols="50" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td >
+                    <input type="submit"  name="register" value=" "style="background:url(../job/images/btn.png); width:250px; height:50px;border:0;padding: 0; " >
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                     <input type="checkbox" name="agree" required>我同意注册条款和会员加入标准
+                 </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="https://www.baidu.com">我是会员，立即登录</a>
+                </td>
+            </tr>
+            <tr><td></td><td><h3>我承诺</h3></td></tr>
+            <tr>
+                <td></td>
+                <td>
+                    <ul>
+                        <li>年满18、单身</li>
+                        <li>抱着严肃的态度</li>
+                        <li>真诚寻找另一半</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>  
+    </form>
+</body>
+</html>
