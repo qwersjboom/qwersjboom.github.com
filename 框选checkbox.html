@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        margin: 0;
+    }
+    #app{
+        width: 1000px;
+        height: 1000px;
+        position: relative;
+    }
+    #b{
+        height:50px
+    }
+    #check{
+        margin-left: 50px;
+    }
+    /* #check{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }  */
+    /* #kuang{
+        position: absolute;
+        border: 1px dashed black;
+    } */
+</style>
+<body>
+    <div id="app">
+        <div id="b"></div>
+        <div id="kuang"></div>
+        <div id="check">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        <br>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        <br>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        </div>
+    
+    </div>
+
+    <script>
+        var element = document.getElementsByTagName("input");
+        var app = document.getElementById("app");
+        var kuang = document.createElement("div");
+        // var check = document.getElementById("check");
+
+        // var element = document.querySelectorAll('input');
+
+        kuang.style.cssText ="position: absolute;border: 1px dashed black;";
+        app.appendChild(kuang);
+        kuang.style.visibility = "hidden";
+
+        // var kuang = document.getElementById("kuang");
+        var startX;var startY;
+
+        
+        var  Down = function(){
+            console.log(11111111);
+            for(let i=0; i < element.length ; i++) {
+                if(element[i].checked == true){
+                    element[i].checked = false;  
+                }
+                              
+            }
+            
+            // kuang.style.width = 100+"px";
+            // kuang.style.height = 100+"px";
+
+            // event.preventDefault();
+             startX = event.clientX;
+             startY = event.clientY;
+            app.addEventListener('mousemove',Move);
+        }
+        var Move = function(){
+            kuang.style.visibility = "visible";
+            
+            var moveX = event.clientX;
+            var moveY = event.clientY;
+            if(moveY <= startY){
+                kuang.style.top = moveY+"px";
+            }else{
+                kuang.style.top = startY+"px";
+            }
+            if(moveX <= startX){
+                kuang.style.left = moveX+"px";
+            }else{
+                kuang.style.left = startX+"px";
+            }
+
+
+
+
+            kuang.style.width = Math.abs(startX - moveX)+"px";
+            kuang.style.height = Math.abs(startY - moveY)+"px";
+            // console.log(event.clientX+" "+event.clientY);
+
+            for(let i=0; i < element.length ; i++) {
+                // console.log(kuang.clientWidth);
+                // console.log(check.target);
+                // console.log(element[i].clientLeft);
+                
+                if(element[i].offsetLeft >= kuang.offsetLeft && element[i].offsetLeft < (kuang.offsetLeft + kuang.clientWidth) && element[i].offsetTop >= kuang.offsetTop && element[i].offsetTop <(kuang.offsetTop+kuang.clientHeight)){
+                    // console.log(event.clientX+" "+event.clientY);
+                    console.log(i);
+                    element[i].checked = true;
+                }
+                    
+            }
+
+
+        }
+        
+
+        var Up = function(){
+            
+            // app.removeChild(kuang);
+            kuang.style.visibility = "hidden";
+            kuang.style.width = 0+"px";
+            kuang.style.height = 0+"px";
+            app.removeEventListener('mousemove',Move);
+            // app.removeEventListener('mousedown',Down);
+        }
+
+        app.addEventListener('mousedown',Down);
+        
+        app.addEventListener('mouseup',Up);
+    
+        
+        // list[0].onmouseover = (e)=>{
+        //     alert(e);
+        // }
+    </script>
+</body>
+</html>
